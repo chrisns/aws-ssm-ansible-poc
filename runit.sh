@@ -35,7 +35,10 @@ until curl $INSTANCE_IP ; do
 done
 curl -v $INSTANCE_IP
 
+open https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#logEventViewer:group=ssmdemo
+open https://s3.console.aws.amazon.com/s3/buckets/ssmdemo/
 aws ssm start-session --target $INSTANCE_ID
+
 
 terraform destroy --force
 
