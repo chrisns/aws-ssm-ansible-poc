@@ -1,6 +1,9 @@
 # AWS SSM + ansible + session manager POC
 
-Simple proof of concept that I can stand up a ec2, deploy ansible to it via systems manager (no ssh!), curl the web page, and then destroy it all again
+Simple proof of concept that I can stand up a ec2, deploy ansible to it via systems manager (no ssh!), curl the web page, and then destroy it all again.
+
+The ansible playbook installs apache and sets the `index.html` to just be `helloworld!` then we curl it to prove that its all worked correctly.
+
 Shell output looks something like this:
 
 ```
