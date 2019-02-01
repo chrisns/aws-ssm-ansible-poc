@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: install apache
+    yum: name=httpd state=present
+
+  - name: enable apache
+    service: name=httpd enabled=yes state=started
+
+  - name: reduced index.html
+    copy:
+      content: |
+        helloworld!
+      dest: /var/www/html/index.html 
